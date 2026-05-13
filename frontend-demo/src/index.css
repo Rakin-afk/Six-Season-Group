@@ -1,0 +1,12 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* সাইড স্ক্রলিং বন্ধ রাখার জন্য */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
