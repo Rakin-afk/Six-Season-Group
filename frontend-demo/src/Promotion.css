@@ -1,0 +1,149 @@
+/* ১. মেইন কন্টেইনার - হিরো সেকশনের হুবহু গ্রাডিয়েন্ট */
+.promotion-container {
+  padding: 80px 10%;
+  position: relative; 
+  overflow: hidden; 
+  
+  /* Hero Section Gradient */
+  background: linear-gradient(to bottom right, #4290F7 30%, #1D2F49 70%); 
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 500px;
+  color: white; 
+}
+
+/* ২. ওয়াটারমার্ক - হিরো সেকশনের ১০০% কপি */
+.promotion-container::before {
+  content: "";
+  position: absolute;
+  right: -10%; 
+  top: 20%;
+  width: 600px; 
+  height: 600px;
+  background-image: url('./assets/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  /* অপাসিটি এবং মিক্স ব্লেন্ড মোড */
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  filter: grayscale(100%);
+  
+  pointer-events: none; 
+  z-index: 0;
+}
+
+/* ৩. এনিমেটেড ব্যানার - scrolling promotion text */
+.promo-banner {
+  width: 100%;
+  height: 80px;
+  background: #021d0e; 
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ৪. মেইন কন্টেন্ট লেআউট (Flexbox) */
+.promo-content {
+  display: flex;
+  flex-direction: row; 
+  gap: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.promo-left {
+  flex: 1;
+}
+
+.promo-left h2 {
+  font-size: 2.5rem;
+  color: #ffffff; 
+  margin-bottom: 20px;
+}
+
+.promo-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* ৫. ডান পাশের ৪টি গ্রিড বক্স */
+.promo-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+/* প্রতিটি বক্সের কন্টেইনার */
+.grid-box {
+  background: linear-gradient(135deg, #8dbad8 0%, #2593ce 100%); 
+  min-height: 160px;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start; /* সবকিছু বামে থাকবে */
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* বক্সের ভেতরের কন্টেন্ট সাজানো (Vertical alignment) */
+.box-content {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; /* লোগো ও টেক্সটের মাঝে গ্যাপ */
+  text-align: left;
+}
+
+/* বক্সের ভেতরের আইকন/লোগো */
+.box-icon {
+  width: 35px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.grid-box h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #000000; /* ব্ল্যাক টেক্সট */
+  font-weight: 800;
+}
+
+.grid-box p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #333333; 
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* হোভার ইফেক্ট */
+.grid-box:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
+  box-shadow: 0 12px 20px rgba(66, 144, 247, 0.2);
+  cursor: pointer;
+}

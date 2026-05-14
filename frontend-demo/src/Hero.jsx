@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// ইমেজ ইম্পোর্ট (নিশ্চিত করুন এই ফাইলগুলো আপনার assets ফোল্ডারে আছে)
+
 import img1 from './assets/img1.png';
 import img2 from './assets/img2.png';
 import img3 from './assets/img3.png';
@@ -35,12 +35,15 @@ const Navbar = () => {
 
   return (
     <nav style={{
+      
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       padding: '10px 40px', backgroundColor: '#E5FEFF', position: 'sticky', top: 0, zIndex: 1000,
       boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
     }}>
-      {/* লোগো সেকশন */}
-      <div style={{ flex: '0 0 auto', display: 'flex', alignItems: 'center' }}>
+      
+      <div style={{
+      
+        flex: '0 0 auto', display: 'flex', alignItems: 'center' }}>
         <img 
           src={logo} 
           alt="SSG Logo" 
@@ -149,10 +152,10 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right Side Main Content */}
+        
         <main style={{ textAlign: 'right', flex: 1, position: 'relative', minHeight: '500px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           
-          {/* Watermark Section (সমান) */}
+          
           <div style={{
             position: 'absolute', right: '-10%', top: '20%', transform: 'translateY(-50%)',
             zIndex: 0, pointerEvents: 'none', mixBlendMode: 'overlay', opacity: 0.3
@@ -168,7 +171,7 @@ function Hero() {
               Driven by Innovation, Built on Trust — A multi-industry conglomerate shaping the future of trade, agriculture, fashion & logistics.
             </p>
 
-            {/* বাটন সেকশন */}
+            
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end', marginTop: '30px' }}>
               <button 
                 style={{ 
@@ -192,7 +195,7 @@ function Hero() {
               </button>
             </div>
 
-            {/* ৪টি গ্লোয়িং প্লেসহোল্ডার */}
+            
             <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end', marginTop: '40px' }}>
               {stats.map((stat, index) => (
                 <div 
@@ -211,7 +214,7 @@ function Hero() {
               ))}
             </div>
 
-            {/* ফোন সেকশন */}
+            
             <div style={{ marginTop: '35px', display: 'flex', justifyContent: 'flex-end' }}>
               <div 
                 style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }}

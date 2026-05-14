@@ -1,14 +1,15 @@
 import React from 'react';
 import Hero from './Hero'; 
+import Promotion from './Promotion';
 
 function App() {
   return (
     <div>
       
       <Hero />
+      <Promotion/>
 
-      {/* এর নিচে আপনি আপনার পরের সেকশনগুলো (Promotion, Ad) যোগ করতে পারবেন */}
-      {/* <Promotion /> */}
+      
     </div>
   );
 }
